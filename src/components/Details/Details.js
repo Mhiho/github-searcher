@@ -8,7 +8,7 @@ class Details extends Component {
     return (
       <div className={classes.Container}>
         <p className={classes.Name}>user: {this.props.name}</p>
-        <img style={{height: '250px', width: '250px' }} src={this.props.image} alt="zdjecie"/>
+        <img className={classes.Image} src={this.props.image} alt="profile_photo"/>
         <p className={classes.Score}>score: {this.props.score}</p>
         <p><a className={classes.Link} href={this.props.link}>direct link</a></p>
       </div>

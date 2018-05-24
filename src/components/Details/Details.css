@@ -18,3 +18,14 @@
 .Container {
   border: 1px solid lightgrey;
 }
+.Image {
+  width: 250px;
+  height: 250px;
+}
+
+@media (min-width: 1001px) {
+  .Image {
+    width: 450px;
+    height: 450px;
+  }
+}

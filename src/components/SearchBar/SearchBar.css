@@ -18,3 +18,28 @@
   justify-content: center;
   align-items: center;
 }
+.Button:hover {
+  background-color: #4881ea;
+  color: white;
+}
+
+@media (min-width: 450px) and (max-width: 700px) {
+  .Input, .Button {
+    width: 420px;
+    height: 120px;
+  }
+}
+
+@media (min-width: 701px) {
+  .Input, .Button {
+    width: 600px;
+    height: 130px;
+  }
+}
+
+@media (min-width: 1001px) {
+  .Input, .Button {
+    width: 950px;
+    height: 140px;
+  }
+}
