@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import classes from './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import axios from 'axios';
 import {connect} from 'react-redux';
@@ -17,13 +17,13 @@ class App extends Component {
   render(){
   console.log(this.props.users);
   return (
-    <div>
-       <SearchBar
-       />
-    <div>
-    <UserList
-    />
-    </div>
+    <div className={classes.Container}>
+      <div className={classes.Main}>
+        <SearchBar/>
+        <UserList
+          className={classes.UserList}
+        />
+     </div>
     </div>
   );
  }

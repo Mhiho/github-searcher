@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {fetchUsers} from '../../actions/index';
 import {bindActionCreators} from 'redux';
 import { connect } from 'react-redux';
+import classes from './SearchBar.css';
 
 class SearchBar extends Component {
 
@@ -23,9 +24,12 @@ class SearchBar extends Component {
       <div>
       <form onSubmit={this.onFormSubmit.bind(this)}>
       <input
-      value = {this.state.term}
+        className={classes.Input}
+        value = {this.state.term}
+        placeholder = "Type here"
       onChange = { e => this.onInputChange(e.target.value)} />
-      <button type="submit" >Search user</button>
+      <button
+        className={classes.Button} type="submit" >Search user</button>
       </form>
       </div>
     );

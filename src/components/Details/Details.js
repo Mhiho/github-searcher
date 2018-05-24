@@ -1,15 +1,16 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import _ from 'lodash';
+import classes from './Details.css';
 
 class Details extends Component {
   render(){
     return (
-      <div>
-        <h1>Użytkownik: {this.props.name}</h1>
-        <img src={this.props.image} alt="zdjecie"/>
-        <h2>Wynik: {this.props.score}</h2>
-        <h3><a href={this.props.link}>Bezpośredni link</a></h3>
+      <div className={classes.Container}>
+        <p className={classes.Name}>user: {this.props.name}</p>
+        <img style={{height: '250px', width: '250px' }} src={this.props.image} alt="zdjecie"/>
+        <p className={classes.Score}>score: {this.props.score}</p>
+        <p><a className={classes.Link} href={this.props.link}>direct link</a></p>
       </div>
     )
   }

@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import {connect} from 'react-redux';
 import _ from 'lodash';
 import Details from '../Details/Details';
+import classes from './UserList.css';
 
 class UserList extends Component {
   state = {
@@ -19,11 +20,13 @@ class UserList extends Component {
     return (
       _.map(this.props.users, user=> user.slice(0,10).map((e,index) =>
       ( <div
+          className={classes.Items}
           key={e.id}
           onClick={() => this.showContentFunction(e.id)}
         >
-            {e.login}
+            { !this.state.show[e.id] ? e.login : null}
             { this.state.show[e.id] ? <Details
+                                      className={classes.Details}
                                       name={e.login}
                                       image={e.avatar_url}
                                       score={e.score}

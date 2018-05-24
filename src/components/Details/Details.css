@@ -1,0 +1,20 @@
+.Name{
+  color: #22dd22;
+}
+.Score{
+  color: #65e765;
+}
+.Link {
+  color: #4fe34f;
+  text-decoration: none;
+}
+
+.Name, .Score, .Link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Container {
+  border: 1px solid lightgrey;
+}
