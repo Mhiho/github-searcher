@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 import {FETCH_USERS} from './actions';
 import {rootReducer} from './reducers/rootReducer';
 import _ from 'lodash';
+import UserList from './components/UserList/UserList';
 
 class App extends Component {
   constructor(props){
@@ -15,14 +16,14 @@ class App extends Component {
 
   render(){
   console.log(this.props.users);
-  const example = _.map(this.props.users, user=> (
-    <li>{user.login}</li>
-  ));
   return (
     <div>
        <SearchBar
        />
-    <ul>{example}</ul>
+    <div>
+    <UserList
+    />
+    </div>
     </div>
   );
  }
