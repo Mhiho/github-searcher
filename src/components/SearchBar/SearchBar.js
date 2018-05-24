@@ -16,7 +16,7 @@ class SearchBar extends Component {
     event.preventDefault();
 
     this.props.fetchUsers(this.state.term);
-    this.setState({term: ''})
+    this.setState({term: ''});
   }
   render() {
     return (
@@ -36,9 +36,13 @@ class SearchBar extends Component {
   }
 
 }
-
+function mapStateToProps(state) {
+  return {
+    users: state.users
+  }
+}
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({fetchUsers}, dispatch)
 }
 
-export default connect(null, mapDispatchToProps)(SearchBar);
+export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);
