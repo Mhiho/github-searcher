@@ -18,6 +18,8 @@ class UserList extends Component {
   }
   render(){
     return (
+      !this.props.users ?
+        "There is no results" :
       _.map(this.props.users, user=> user.slice(0,10).map((e,index) => (
         <div
           className={classes.Items}
