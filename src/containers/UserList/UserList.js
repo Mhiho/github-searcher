@@ -16,9 +16,6 @@ class UserList extends Component {
     };
     this.setState({show: itemToShow})
   }
-  componentDidMount() {
-    return
-  }
   render(){
     return (
       _.map(this.props.users, user=> user.slice(0,10).map((e,index) => (
@@ -26,7 +23,7 @@ class UserList extends Component {
           className={classes.Items}
           key={e.id}
           onClick={() => this.showContentFunction(e.id)}
-          >
+        >
             { !this.state.show[e.id] ? e.login : null}
             { this.state.show[e.id] ? <Details
                                         className={classes.Details}
@@ -49,6 +46,7 @@ function mapStateToProps(state) {
   return {
     users: state.users
   }
+
 }
 
 export default connect(mapStateToProps)(UserList);

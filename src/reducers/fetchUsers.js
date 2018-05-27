@@ -1,5 +1,4 @@
 import {FETCH_USERS} from '../actions/index';
-import {FETCH_ERROR} from '../actions/index';
 
 const initState = {
   users: []
